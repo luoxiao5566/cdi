@@ -1,6 +1,4 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.3'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
@@ -10,11 +8,20 @@ sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
+
+	flatDir {
+		dirs 'lib'
+	}
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'javax.inject:javax.inject:1'
+	implementation 'org.reflections:reflections:0.9.11'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+	testImplementation name: 'fusheng'
+
+	implementation 'org.apache.commons:commons-lang3:3.8'
+	implementation 'org.apache.poi:poi-ooxml:4.0.0'
 }
 
 test {

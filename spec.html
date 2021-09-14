@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <title>Fusheng-DI</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<b>什么是依赖注入</b>
+<p>依赖注入(Dependency Injection, DI)是一种设计模式，其作用是去除Java类之间的依赖关系，实现松耦合，以便于开发测试</p>
+<b>Fusheng-cdi简介</b>
+<p>Fusheng-cdi是基于依赖注入模式，借鉴CDI实现的一个DI轻量级框架，使用者可以支持通过构造器依赖注入，只需要将要使用接口声明并建立实现类，再使用本框架所提供的注解和规范就能由系统自动注入实现类，快捷易用</p>
+<b>如何将Fusheng-cdi引入</b>
+<p>在您的项目中引入Fusheng-cdi即可</p>
+<b>fusheng-cdi container</b>
+<p class="example">
+    当我们指定一个根类时，在启动项目时，会调用getContainer方法，此时会从根类的类路径开始扫描此路径下所有的类，将扫描到的类放入CdiContainer中，我们可以根据类名从CdiContainer中获取对应的实例<br>
+    example:我们给定一个根类
+    <span class="variable" data-name="rootClass">com.tw.Main</span>,
+    一个测试类com.tw.test.Test,
+    当<span class="function" data-action="startup" data-params="rootClass">启动程序</span>后，
+    通过<span class="variable" data-name="className">com.tw.test.Test</span>
+    从CdiContainer获取到的
+    Test实例个数为<span class="assertion" date-expect="equals" data-action="getComponentSize" data-params="className">1</span>
+</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class="example">
+    当开始初始化程序时会以根类所在的路径（包含根路径）依次向下扫描，将所扫描到的所有类信息加载到CdiContainer中，此时就可以利用CdiContainer获取类的实例了。<br>
+    example: 设定一个根类
+    <span class="variable" data-name="rootClass">com.tw.fixture.model.Main</span>，
+    一个测试类<span class="variable" data-name="className">com.tw.fixture.model.test.ClassSizeTest</span>，
+    当<span class="function" data-action="init" data-params="rootClass">启动程序</span>后，
+    从CdiContainer获取到的
+    Test实例个数为<span class="assertion" data-expect="equal" data-action="getComponentSize" data-params="className">1</span>
+</p>
+
+</body>
+</html>
